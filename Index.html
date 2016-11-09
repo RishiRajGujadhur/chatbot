@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+    <script src="//cdn.cleverbot.io/build/1.0/cleverbot.io.min.js"></script>
+    <link href="css/2-col-portfolio.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ 
+</head>
+<body>
+    <div id="video"></div>
+    <script>
+        function Answer12() {
+
+            var bot = new cleverbot("4o9LJ5uaFmiSVNLe", "1F5vygEzAImYJuHF3JHTe8Ifk8NVjygS"); // Set up keys
+            var question = document.getElementById("textariffic").value;
+
+            alert("Message Sent!");
+
+            bot.setNick("sandbox.test"); // Set a nickname
+            bot.create(function (err, session) { // Initialize Cleverbot
+
+                bot.ask(question, function (err, response) {
+                    document.getElementById("txt").value = response;
+                    var msg = new SpeechSynthesisUtterance(response);
+                    msg.lang = 'en-GB';
+                    window.speechSynthesis.speak(msg);
+                });
+
+            });
+        }
+    </script>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">How are you feeling currently?</h4>
+                </div>
+                <div class="modal-body" style="display:inline">
+
+                    <div style="display:inline">
+                        <button type="button" onclick="Happy()" class="btn btn-success" data-dismiss="modal">Happy <span style="font-size:36px">😄</span></button>
+
+                        <button type="button" onclick="Calm()" class="btn btn-info" data-dismiss="modal">Calm <span style="font-size:36px">😥</span></button>
+
+                        <button type="button" onclick="Sad()" class="btn btn-default" data-dismiss="modal">Sad <span style="color:#777; font-size:36px">😐</span></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container" style="background-color:#ffffff; border-radius:5px; border:1px solid #e5e5e5; margin-top:-50px;">
+    
+        <!-- Page Header -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Navigation -->
+                <nav class="navbar navbar navbar-fixed" role="navigation" style="background-color:#ffffff; border-color:white;">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" style="color:#1a1a1a; font-size:20px; font-family: 'Ubuntu', sans-serif;" href="home.html"><span style="font-size:40px;"><i class="fa fa-flask"></i></span> Skynet v0.4</a>
+                        </div>
+                        <div style="float:right; margin-top:10px; ">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                    Change mood:
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li> <a href="#" style="color:#4cae4c" onclick="Happy()">Happy <span style="font-size:36px"> 😄</span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="color:#46b8da" onclick="Calm()">Calm <span style="font-size:36px"> 😥</span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" style="color:#777" onclick="Sad()">Sad <span style="font-size:36px"> 😐</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.container -->
+                </nav>
+
+                <h1 class="page-header" style="text-align:left">
+                    An Artificial Intelligence
+                    <small>demo.</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-12 portfolio-item">
+                <p class="text-muted">Skynet :</p>
+                <textarea class="form-control" id="txt" rows="2" value="" disabled="disabled"></textarea>
+                <form id="tipper" role="form">
+                    <div class="form-group">
+                        <br />
+                        <p class="text-muted">You :</p>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button" onclick="Answer12()">Send</button>
+                            </span>
+                            <input type="text" name="textarea" class="form-control" rows="1" id="textariffic" placeholder="Speak to Skynet..." />
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- /.row -->
+        <hr>
+        <!-- Footer -->
+        <footer style="margin-top:0px; margin-bottom:10px">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Charles Telfair Institute 2015 <span style="float:right;">Developed by<a href="mailto:rrg.cti@gmail.com"> Rishi Raj Gujadhur.</a> Supported by <a href="https://www.facebook.com/pages/LYDD-Hi-Tech/1674615556084161">LYDD Hi-Tech.</a> Designed by <a href="https://mu.linkedin.com/in/hemanmohabeer">Dr. Heman Mohabeer</a>.</span></p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <script src="js/ChangeVideo.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script src="js/videoBg.js"></script>
+</body>
+</html>
