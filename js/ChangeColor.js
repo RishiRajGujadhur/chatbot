@@ -1,17 +1,23 @@
 ﻿function Happy()
 {
-    $('body').css('background-color', 'green !important');
+    $('#dbody')
+    .css('background-color', '')
+    .css('background-color', 'blue');
 }
 
 function Calm()
 {
-   $('body').css('background-color', 'blue !important');
+     $('#dbody')
+    .css('background-color', '')
+    .css('background-color', 'red');
 }
 
 
 function Sad()
 {
-     $('body').css('background-color', 'red !important');
+     $('#dbody')
+    .css('background-color', '')
+    .css('background-color', 'black');
 }
 
 
