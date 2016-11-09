@@ -1,26 +1,15 @@
-﻿function Happy()
+function Happy()
 {
-    $('#video').YTPlayer({
-        fitToBackground: true,
-        videoId: 'ovxnSmGaVlY'
-    });
+    $('body').css('background-color', 'green !important');
 }
 
 function Calm()
 {
-    $('#video').YTPlayer({
-        fitToBackground:true,
-        videoId: 'a0Qk-tsGY5Q'
-    });
+   $('body').css('background-color', 'blue !important');
 }
 
 
 function Sad()
 {
-    $('#video').YTPlayer({
-        fitToBackground: true,
-        videoId: 'XxaC3V78ads'
-    });
+     $('body').css('background-color', 'red !important');
 }
-
-
