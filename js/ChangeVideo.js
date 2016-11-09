@@ -1,15 +1,17 @@
 function Happy()
 {
-    $('body').css('background-color', 'green !important');
+    
+       document.body.style.backgroundColor = "red";
 }
 
 function Calm()
 {
-   $('body').css('background-color', 'blue !important');
+     
+     document.body.style.backgroundColor = "blue";
 }
 
 
 function Sad()
 {
-     $('body').css('background-color', 'red !important');
+      document.body.style.backgroundColor = "yellow";
 }
