@@ -30,7 +30,7 @@
           if (window.location.origin == 'file://') {
               tag.src = 'http://www.youtube.com/iframe_api';
           } else {
-              tag.src = '//www.youtube.com/iframe_api';
+              tag.src = 'https://www.youtube.com/iframe_api';
           }
 
           head.appendChild(tag);
