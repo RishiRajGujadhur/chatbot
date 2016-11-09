@@ -32,6 +32,12 @@
           } else {
               tag.src = 'https://www.youtube.com/iframe_api';
           }
+              
+               if (window.location.origin == 'https://rishirajgujadhur.github.io/') {
+              tag.src = 'http://www.youtube.com/iframe_api';
+          } else {
+              tag.src = 'https://www.youtube.com/iframe_api';
+          }
 
           head.appendChild(tag);
 
