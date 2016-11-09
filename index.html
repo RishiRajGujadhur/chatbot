@@ -14,7 +14,12 @@
 
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
- 
+ <style>
+body {
+    background-size:cover;
+}
+</style>
+    
      <style>
          #video{
  position: relative;
@@ -30,7 +35,7 @@
     
     
 </head>
-<body>
+<body id="dbody">
     <div id="video"></div>
     <script>
         function Answer12() {
@@ -124,12 +129,12 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-12 portfolio-item">
-                <p class="text-muted">Skynet :</p>
+                
                 <textarea class="form-control" id="txt" rows="2" value="" disabled="disabled"></textarea>
                 <form id="tipper" role="form">
                     <div class="form-group">
                         <br />
-                        <p class="text-muted">You :</p>
+                      
                         <div class="input-group">
                             <span class="input-group-btn">
                                 <button class="btn btn-primary" type="button" onclick="Answer12()">Send</button>
