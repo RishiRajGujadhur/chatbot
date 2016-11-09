@@ -1,7 +1,7 @@
 ﻿function Happy()
 {
     $('#video').YTPlayer({
-        fitToBackground: true,
+        fitToBackground: false,
         videoId: 'ovxnSmGaVlY'
     });
 }
@@ -9,7 +9,7 @@
 function Calm()
 {
     $('#video').YTPlayer({
-        fitToBackground: true,
+        fitToBackground:false,
         videoId: 'a0Qk-tsGY5Q'
     });
 }
